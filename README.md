@@ -57,6 +57,20 @@ My contributions include:
 - Integrated the chatbot model with the Flask web application
 - Organized and maintained the project repository
 
+## User Interface Preview
+
+### Dashboard
+![Dashboard](preview/dashboard1.png)
+
+### Chat Interface
+![Chat Interface](preview/chatbot1.png)
+
+### Stress Detection
+![Stress Detection](preview/stressdetect.png)
+![Result](preview/stressdetect_result.png)
+
+### Training Dataset
+![JSON](preview/traindataset.png)
 
 ## Disclaimer
 Amethyst Chatbot is designed for educational and early awareness purposes only.
