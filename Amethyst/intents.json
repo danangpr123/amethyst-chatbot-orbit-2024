@@ -1,0 +1,721 @@
+{
+    "intents": [
+      {
+        "tag": "sapaan",
+        "patterns": [
+          "hi",
+          "hey",
+          "hallo",
+          "hello",
+          "hai",
+          "permisi"
+          
+        ],
+        "responses": [
+          "Halo, Apa Yang Bisa Kami Lakukan Untuk Kalian?.",
+          "Hi, Ada Yang Bisa Kami Bantu?.."
+        ]
+      },
+  
+      {"tag": "salam",
+        "patterns": [
+          "permisi, mau bertanya?",
+          "permisi, mau nanya?",
+          "permisi, mau tanya",
+          "boleh tanya ga?",
+          "mau nanya dong?",
+          "ingin bertanya?",
+          "izin bertanya?",
+          "saya mau bertanya",
+          "kita mau nanya?"
+        ],
+        "responses":[
+        "Boleh Ingin Tanya Apa?.",
+        "Silahkan, Mau Bertanya Apa?.."
+      ],
+          "context": [""]
+      },
+  
+  
+      {"tag": "bertanya",
+        "patterns":[
+          "curhat dong",
+          "lagi ada masalah mau curhat dong",
+          "belakangan ini saya ada masalah",
+          "saya sedih kemarin kena masalah",
+          "akhir -akhir ini saya banyak masalah",
+          "minggu lalu, saya banyak mendapat masalah",
+          "beberapa waktu lalu, saya menghadapi masalah "],
+        "responses": [
+          "Bisa Dijelaskan Masalahnya.",
+          "Coba Ceritakan Masalahmu.."],
+        "context": [""]
+      },
+      {
+        "tag": "masa depan",
+        "patterns":[
+          "bagaimana cara mengembangkan diri supaya masa depan cerah",
+          "gimana cara kita mengambil langkah kedepan",
+          "agar kita mempercayai hal yang terjadi di masa depan",
+          "cara menemukan sesuatu untuk memperbaiki di masa yang akan datang",
+          "hal yang dapat kita sikapi dalam kegagalan",
+          "bagaimana agar kita tidak takut dengan yang akan datang nanti",
+          "ketika kita gagal,apa yang harus kita lakukan "],
+        "responses":[
+          "Menaruh Mimpi,Batasi Diri Dan Mulai Bersyukur.",
+          "Kamu Dapat Belajar Dari Kesalahan Juga Ambil Kesempatan Sebanyak Mungkin..",
+          "Dengan Menyibukkan Dirimu Dan Menjalankan Apa Yang Kamu Suka..."],
+        "context": [""]
+      },
+      {
+        "tag": "masa lalu",
+        "patterns":[
+          "bagaimana cara memaafkan masa lalu yang buruk",
+          "kita masih melakukan kesalahan,kita harus apa",
+          "bagaimana kita dapat meningkatkan sebuah pengalaman",
+          "ketika kita mengingat masa lalu,cara terbaik untuk melupakannya",
+          "kita banyak melakukan kesalahan,apa yang membuat kita jadi lebih baik"],
+        "responses":[
+          "Kita Bisa Membangun Kebiasaan Baik, Dan Kenali Diri Sendiri.",
+          "Ikhlaskan Apa Yang Sudah Terjadi, Dan Alihkan Dengan Kegiatan Positif..",
+          "Mencari Tahu Pemicunya,Juga Bisa Memaafkan Setiap Orang..."],
+        "context": [""]
+      },
+      {
+        "tag": "pikiran positif",
+        "patterns":[
+          "agar kita dapat berpikir dengan baik, hal yang dapat kita lakukan",
+          "apa saja batasan agar tidak salah mengambil sikap atau tindakan",
+          "apa yang kita lakukan untuk terus berpikir positif",
+          "yang membuat kita bersemangat dalam menjalani kehidupan harus melakukan apa",
+          "bagaimana kita bisa sayang kepada diri sendiri",
+          "Bagaimana mengambil sikap positif dalam kehidupan sehari-hari",
+          "cara agar kita tidak salah menafsirkan pikiran positif ke diri kita"],
+        "responses":[
+          "Selalu Berpikir Positif Tapi Butuh Proses Tidak Langsung.",
+          "Meyakini Diri,Membayangkan Setiap Manusia Akan Lebih Baik..",
+          "Saling Menghormati, Juga Menjaga Kerukunan..."],
+          "context": [""]
+      },
+      {
+        "tag": "pikiran negatif",
+        "patterns":[
+          "bagaimana cara agar kita lebih bijak memilih kepentingan",
+          "jadi cara agar tidak membandingkan diri kita dengan orang lain",
+          "mengapa kita sering memikirkan perkataan orang lain",
+          "hal apa yang dapat saya lakukan untuk menghilangkan stigma kurang baik",
+          "solusi agar kita tidak berpikiran ke arah negatif untuk mengatasinya seperti apa",
+          "kita banyak berpikiran negatif,apa yang harus kita ubah dari hal tersebut"
+        ],
+        "responses":[
+          "Pikirkan Kesenangan,Atur Waktu Dan Minta Bantuan Jika Perlu Dan Fokus.",
+          "Cobalah Mengabaikan Pikiran Negatif Dan Berdialog Dengan Diri Sendiri..",
+          "Pikirkan Hal Yang Baik Juga Jadikan Itu Sebagai Motivasi..."],
+         "context": [""]
+      },
+      {
+        "tag": "bahagia",
+        "patterns": [
+          "siapa yang selama ini,kita anggap sebagai orang yang memiliki kebahagiaan",
+          "dimana kita bisa selalu merasakan bahagia",
+          "kebahagian seseorang berada dimana",
+          "Kehidupan yang aku jalani sekarang ini untuk siapa? ",
+          "siapa yang mengerti diri kita sendiri",
+          "siapa yang dapat diajak menemani kita saat merasa bahagia",
+          "bagaimana menemukan kebahagian sejati dalam hidup kita"
+        ],
+        "responses": [
+          "Di Setiap Orang Yang Bisa Menemukan Sisi Positifnya.",
+          "Orang Terdekat Yang Selalu Membantumu Dan Orang Yang Memiliki Kesenangan..",
+          "Selalu Menyempatkan Waktu Untuk Bersama Keluarga Dan Teman..."],
+        "context": [""]
+      },
+      {
+        "tag": "sedih",
+        "patterns": [
+          "ketika kita dapat masalah,tidak bisa menemukan jalan keluar apa yang harus dilakukan",
+          "saat kita belajar giat tapi ada masanya kita berputus asa mengapa itu bisa terjadi ",
+          "gimana agar kita bisa berempati ke sesama manusia lainnya",
+          "semakin lama dibiarkan,Semakin buruk kesedihan kita dan harus melakukan apa",
+          "bagaimana kita tidak malu mengakui ketika kita sedih"],
+        "responses": [
+          "Karena Kita Manusia Yang harus Dituntut Tidak Menyerah Dalam Menghadapi Kesulitan.",
+          "Evaluasi Diri, Dan Lihat Sudut Pandang Lain..",
+          "Dengan Bersyukur,Mencari Solusi Juga Membantu Orang Lain Yang Kesulitan...",
+          "Berani Mengambil Sikap Ketika Orang Lain Mendapat Perlakuan Tak Adil"],
+          "context": [""]
+      },
+  
+      {
+        "tag": "pola tidur",
+        "patterns": [
+          "bagaimana agar pola tidur kita tidak berantakan",
+          "bagaimana cara mencegah susah tidur",
+          "hal apa yang membuat kita tenang dan rileks untuk tidur nanti",
+          "sulit untuk menentukan secara pasti, apakah anda sudah tertidur atau belum",
+          "kenapa kita sering merasakan cemas saat sedang tidur",
+          "apa yang dapat kita lakukan untuk mengatasi jadwal tidur yang tidak teratur",
+          "saya akhir-akhir ini tidak bisa tidur bagaimana cara saya agar bisa tertidur",
+          "ketika saya tertidur di siang hari,mengapa dimalam hari tidak bisa tidur"],
+        "responses": [
+          "Hindarilah Mengomsumsi Kopi atau Jangan Terlalu Banyak Pikiran.",
+          "Ciptakan Suasana Yang Nyaman Pada Saat Tidur..",
+          "Konsisten dengan Rutinitas dan Jadwal Yang Dibuat..."
+         ],
+          "context": [""]
+      },
+       
+      {
+        "tag": "pola makan",
+        "patterns": [
+          "ketika kita kecanduan memakan sesuatu,gimana untuk mengatasinya",
+          "kita banyak pikiran jadi tidak nafsu makan,hal apa yang dapat menghilangkannya",
+          "apakah makanan atau memikirkan makanan mendominasi hidup kita",
+          "kenapa kita tetap ingin makan walaupun tidak lapar",
+          "apa cara mencegah makan terlalu kenyang sampai begah",
+          "apakah kita akan mencari makanan jika sedang sedih, tertekan, dan stres",
+          "bagaimana kita mengurangi kecemasan berlebihan terhadap makanan yang kita makan",
+          "bagaimana cara membuat kita termotivasi terus untuk makan sehat",
+          "hal apa yang dapat dilakukan agar orang-orang menikmati makanan sehat "],
+        "responses": [
+          "Atur makanan yang akan dimakan Juga Berikan Jadwal.",
+          "Berolahraga Dan Ubah Pola Makan..",
+          "Dengan Mencoba Menyukai Makanan Yang Sehat...",
+          "Mungkin Terbiasa Jadi Secara Otomatis Akan Melakukannya..."
+          ],
+          "context": [""]
+      },
+     
+        
+      {
+        "tag": "pola pikir berkembang",
+        "patterns": [
+          "bagaimana cara kita semangat dalam menjalani aktivitas",
+          "Bagaimana mengembangkan bakat dalam diri kita sendiri",
+          "apa yang membuat kita antusias dalam mengikuti suatu kegiatan",
+          "setiap hari kita selalu menghadapi tantangan, gimana kita agar menyukai tantangan",
+          "pasti dalam kehidupan ada masalah, solusi yang terbaik untuk menghadapi hal tersebut",
+          "saat kita mendapatkan kritikan,agar dapat menerima kita harus melakukan apa ",
+          "ketika kita sudah hilang harapan supaya kita mendapatkan harapan kembali bagaimana "
+  
+        ],
+        "responses": [
+          "Melakukan Meditasi Dan Ucapkan Kata-Kata Positif Dalam Diri Kita.",
+          "Tingkatkan Skill Juga Susun Strategi..",
+          "Berterima Kasih Dan Menerima Dengan Perasaan Terbuka..."
+          ],
+          "context": [""]
+      },
+  
+      {
+        "tag": "pola pikir tetap",
+        "patterns": [
+          "sebenarnya kita bisa melakukan sesuatu tapi mengapa selalu merasa tidak bisa ",
+          "ketika kita ada masalah menghampiri, kenapa cenderung menghindari masalah tersebut",
+          "mengapa saat membuat kesalahan, kita selalu mencari alasan agar tidak disalahkan ",
+          "mengapa kita takut pada perubahan dalam diri kita",
+          "apa yang menghambat saya melakukan apa yang seharusnya dilakukan",
+          "kenapa kita mudah menyerah padahal hasilnya masih belum tau",
+          "hal yang bisa kita ambil hikmah dari kebiasaan buruk",
+          "gimana kita tidak merasa terancam dengan kesuksesan orang lain"],
+        "responses": [
+          "Membangun Kepercayaan  Dalam Diri Dan Kita Harus Berjiwa Besar .",
+          "Kemungkinan Tidak Yakin Dengan Dirinya Sendiri..",
+          "Fokus Dengan Diri Sendiri Juga Tetap Bersyukur Dengan Apa Yang Kita Miliki.."
+  
+          ],
+          "context": [""]
+      },
+  
+      {
+        "tag": "percaya diri",
+        "patterns": [
+          "bagaimana kita tetap percaya diri walau banyak hinaan pada diri kita ",
+          "orang yang percaya diri akan selalu apa",
+          "gimana cara membangun rasa percaya diri ",
+          "apa yang membuat kita yakin dengan yang dimiliki diri kita",
+          "bagaimana agar dapat bersikap realistis dengan diri sendiri",
+          "agar tujuan kita tercapai harus melakukan seperti apa",
+          "apakah yang dilakukan kita agar lebih menonjol daripada orang lain",
+          "Bagaimana cara  agar percaya diri terhadap diri kita sendiri"
+        ],
+        "responses": [
+          "Belajarlah Untuk Memahami Situasi Kita Saat Ini.",
+          "Bergaul Dengan Orang Yang Positif..",
+          "Karena Hidup Jadi Jauh Lebih Mudah Dan Bahagia...",
+          "Selalu Punya Inisiatif Dan Aktif Dalam Berbagai Kegiatan..."
+          ],
+          "context": [""]
+      },
+  
+      {
+        "tag": "tidak percaya diri",
+        "patterns": [
+          "kenapa saat kita dipuji banyak orang jadi tidak percaya diri",
+          "mengapa kita sering tidak percaya diri dihadapan orang lain",
+          "bagaimana saat kita gugup jadi hilang rasa percaya diri ",
+          "apa yang membuat kita kekurangan motivasi hidup",
+          "yang membuat kita minder atau tidak percaya diri",
+          "pelajaran apa yang di dapatkan dari sebuah kegagalan?",
+          "apakah yang membuat kita selalu kurang percaya diri"],
+        "responses": [
+          "Itu Termasuk Hal Wajar Karena Setiap Orang Pernah Mengalaminya.",
+          "Berhenti Membandingkan Diri Dengan Orang Lain..",
+          "Membuat Keputusan Sendiri Dan Bertanggung Jawab Terhadap Pilihan...",
+          "Belum Menemukan Kekuatan Diri juga Sering Negative Thingking....."
+          ],
+          "context": [""]
+      },
+      {
+        "tag": "perpisahan",
+        "patterns": ["selamat tinggal", "sampai jumpa lagi", "selamat tinggal untuk kamu","sampai ketemu lagi", "sampai bertemu lagi"],
+        "responses": [
+          "Sampai Jumpa Lagi Dan Terima Kasih. ",
+          "Semoga Harimu Menyenangkan..",
+          "Selamat Tinggal! Kembali Lagi Nanti..."
+        ]
+      },
+      {
+        "tag": "selamat",
+        "patterns": ["terima kasih banyak", "sangat membantu", "terima kasih","terima kasih atas dukungannya", "terimakasih sebelumnya"],
+        "responses": ["Kami Senang Bisa Membantu!.", "Dengan Senang Hati..","Tentu, Jangan Khawatir"]
+      },
+      {
+        "tag": "terakhir",
+        "patterns": [
+          "terima kasih pencerahannya",
+          "makasi ya,sekarang saya bisa lebih baik",
+          "baik, terima kasih atas masukkannya",
+          "terima kasih telah menjadi pendengar dari cerita saya"],
+        "responses": [
+          "Semoga Yang Kami Jelaskan Dapat Dipahami Dengan Baik.",
+          "Ya, Semoga Kami Lakukan Bisa Membuat Kamu Menjadi Lebih Baik"],
+          "context": [""]
+      },
+      {
+        "tag": "tingkat_stres",
+        "patterns": [
+          "Saya merasa sangat stres",
+          "Tingkat stres saya tinggi",
+          "Bagaimana cara mengatasi stres?",
+          "Saya merasa tertekan"
+        ],
+        "responses": [
+          "Stres adalah hal yang umum, Anda bisa mencoba teknik pernapasan atau berolahraga untuk mengatasinya.",
+          "Saya mengerti, cobalah untuk melakukan aktivitas yang menyenangkan atau berbicara dengan seseorang yang dapat dipercaya.",
+          "Anda tidak sendirian, banyak orang mengalami stres. Cobalah untuk mengatur waktu istirahat dan menghindari beban kerja yang berlebihan."
+        ]
+      },      
+      {
+        "tag": "pertanyaan_psikolog",
+        "patterns": [
+          "Bagaimana saya bisa membuat janji dengan seorang psikolog?",
+          "Apakah Anda memiliki rekomendasi psikolog?",
+          "Bagaimana proses konseling dengan seorang psikolog?",
+          "Apakah konseling dapat membantu saya?"
+        ],
+        "responses": [
+          "Anda dapat mencari psikolog di daerah Anda melalui layanan kesehatan terdekat atau situs web khusus.",
+          "Saya merekomendasikan Anda untuk mencari psikolog terpercaya dan mengatur janji untuk konsultasi awal.",
+          "Konseling dengan psikolog adalah langkah yang baik untuk membantu Anda mengatasi masalah kesehatan mental. Anda dapat mencari ulasan atau rekomendasi dari teman atau keluarga."
+        ]
+      },
+  {
+    "tag": "self-care",
+    "patterns": [
+      "Bagaimana cara melakukan self-care?",
+      "Apa saja kegiatan self-care yang bisa dilakukan?",
+      "Saya butuh tips self-care",
+      "Bagaimana cara merawat diri sendiri dengan baik?"
+    ],
+    "responses": [
+      "Self-care adalah penting untuk kesehatan mental. Anda bisa mencoba meditasi, yoga, atau melakukan hobi yang Anda nikmati.",
+      "Merawat diri sendiri adalah langkah penting untuk kesehatan dan kesejahteraan Anda. Cobalah untuk memberikan waktu untuk diri sendiri dan melakukan aktivitas yang menenangkan.",
+      "Self-care melibatkan aktivitas yang membuat Anda merasa baik secara fisik, emosional, dan mental. Mungkin Anda bisa mencoba berjalan-jalan di alam, membaca buku, atau mendengarkan musik yang menenangkan."
+    ]
+  },
+  {
+    "tag": "relaksasi",
+    "patterns": [
+      "Bagaimana cara merasa lebih rileks?",
+      "Saya merasa tegang, apa yang harus saya lakukan?",
+      "Ada cara mudah untuk merasa lebih tenang?"
+    ],
+    "responses": [
+      "Untuk merasa lebih rileks, Anda bisa mencoba teknik pernapasan dalam, meditasi, atau mendengarkan musik yang menenangkan.",
+      "Cobalah untuk melakukan latihan pernapasan dalam dan perlahan untuk mengurangi ketegangan. Anda juga bisa mencoba teknik relaksasi otot progresif atau yoga.",
+      "Penting untuk memberikan waktu untuk diri sendiri dan melakukan aktivitas yang membuat Anda merasa tenang. Anda bisa mencoba berjalan-jalan di alam, mandi air hangat, atau berbicara dengan seseorang yang Anda percayai."
+    ]
+  },
+  {
+    "tag": "dukungan_keluarga",
+    "patterns": [
+      "Bagaimana mendapatkan dukungan dari keluarga?",
+      "Saya butuh dukungan dari keluarga",
+      "Bagaimana cara membicarakan masalah kesehatan mental dengan keluarga?"
+    ],
+    "responses": [
+      "Penting untuk berbicara terbuka dengan anggota keluarga Anda tentang masalah kesehatan mental Anda. Mereka mungkin dapat memberikan dukungan dan pemahaman yang Anda butuhkan.",
+      "Anda bisa mencoba membicarakan masalah Anda dengan anggota keluarga yang Anda percayai. Berbicara tentang perasaan Anda bisa membantu mengurangi beban yang Anda rasakan.",
+      "Mengajak keluarga Anda untuk terlibat dalam perawatan kesehatan mental Anda bisa menjadi langkah penting untuk pemulihan. Mereka dapat menjadi sumber dukungan dan motivasi yang kuat."
+    ]
+  },
+  {
+    "tag": "perawatan_diri",
+    "patterns": [
+      "Bagaimana saya bisa lebih peduli pada diri sendiri?",
+      "Saya sering lupa merawat diri sendiri",
+      "Apa saja hal-hal yang bisa saya lakukan untuk merawat diri sendiri dengan lebih baik?"
+    ],
+    "responses": [
+      "Merawat diri sendiri adalah penting untuk kesehatan dan kesejahteraan Anda. Anda bisa mencoba menetapkan waktu khusus setiap hari untuk melakukan aktivitas yang Anda nikmati.",
+      "Ingatlah untuk memberikan waktu untuk diri sendiri setiap hari. Anda bisa mencoba mencatat apa yang membuat Anda bahagia dan memprioritaskan kebutuhan Anda sendiri.",
+      "Merawat diri sendiri bukanlah hal yang egois, melainkan penting untuk menjaga kesehatan fisik dan mental Anda. Cobalah untuk memberikan waktu untuk melakukan aktivitas yang menyenangkan dan menenangkan."
+    ]
+  },
+  {
+  "tag": "aktivitas_relaksasi",
+  "patterns": [
+    "Apakah ada aktivitas relaksasi yang bisa saya coba?",
+    "Bagaimana cara saya merasa lebih tenang?",
+    "Apa saja kegiatan yang bisa membantu saya bersantai?"
+  ],
+  "responses": [
+    "Anda bisa mencoba meditasi, pernapasan dalam, atau mendengarkan musik yang menenangkan.",
+    "Aktivitas seperti yoga, berjalan-jalan di alam, atau membaca buku bisa membantu Anda merasa lebih rileks.",
+    "Melakukan kegiatan yang Anda nikmati, seperti melukis, berkebun, atau memasak, juga bisa membantu Anda merasa lebih tenang."
+  ]
+},
+{
+  "tag": "pemahaman_diri",
+  "patterns": [
+    "Bagaimana saya bisa lebih memahami diri sendiri?",
+    "Apa yang harus saya lakukan untuk memahami perasaan saya?",
+    "Bagaimana cara saya mengenali emosi saya?"
+  ],
+  "responses": [
+    "Anda bisa mencoba menulis jurnal atau refleksi harian untuk memahami perasaan dan pikiran Anda.",
+    "Meditasi atau olahraga yang menenangkan dapat membantu Anda lebih terhubung dengan diri sendiri dan merasakan emosi dengan lebih jelas.",
+    "Membahas perasaan Anda dengan seseorang yang Anda percayai atau dengan seorang profesional kesehatan mental juga bisa membantu Anda memahami diri sendiri dengan lebih baik."
+  ]
+},
+{
+  "tag": "manajemen_waktu",
+  "patterns": [
+    "Saya merasa sulit mengatur waktu",
+    "Bagaimana cara saya mengelola waktu dengan lebih baik?",
+    "Apa tips untuk meningkatkan manajemen waktu saya?"
+  ],
+  "responses": [
+    "Cobalah membuat jadwal harian atau mingguan untuk mengatur waktu Anda dengan lebih efektif.",
+    "Prioritaskan tugas-tugas Anda dan alokasikan waktu untuk istirahat dan kegiatan yang menyenangkan.",
+    "Gunakan teknologi seperti aplikasi manajemen waktu atau to-do list untuk membantu Anda mengatur jadwal dan mengingatkan tugas."
+  ]
+},
+{
+  "tag": "komunikasi_terbuka",
+  "patterns": [
+    "Bagaimana cara saya berkomunikasi dengan lebih terbuka?",
+    "Saya merasa sulit untuk berbicara tentang perasaan saya",
+    "Apa tips untuk meningkatkan komunikasi saya dengan orang lain?"
+  ],
+  "responses": [
+    "Cobalah untuk mendengarkan dengan empati dan berbicara secara jujur tentang perasaan dan pikiran Anda kepada orang lain.",
+    "Bicarakan perasaan Anda secara terbuka dan jangan takut untuk meminta dukungan dari orang-orang terdekat Anda.",
+    "Latihan berbicara tentang perasaan Anda dengan teman atau keluarga dapat membantu Anda merasa lebih nyaman dalam berkomunikasi secara terbuka."
+  ]
+},
+{
+  "tag": "manajemen_emosi",
+  "patterns": [
+    "Bagaimana saya bisa mengelola emosi saya?",
+    "Saya sering merasa kesal, apa yang harus saya lakukan?",
+    "Apa tips untuk mengatasi emosi negatif?"
+  ],
+  "responses": [
+    "Coba praktikkan teknik relaksasi seperti meditasi atau pernapasan dalam saat Anda merasa emosi negatif muncul.",
+    "Penting untuk mengenali pemicu emosi negatif dan mencari cara untuk menangani stres dengan lebih efektif.",
+    "Bicarakan perasaan Anda dengan seseorang yang Anda percayai atau tulis jurnal untuk mengungkapkan emosi Anda."
+  ]
+},
+{
+  "tag": "pengembangan_diri",
+  "patterns": [
+    "Bagaimana saya bisa mengembangkan diri saya?",
+    "Apa langkah-langkah untuk pertumbuhan pribadi?",
+    "Saya ingin belajar menjadi lebih baik, apa yang harus saya lakukan?"
+  ],
+  "responses": [
+    "Cari tahu minat dan bakat Anda, lalu cari kesempatan untuk mengembangkan keterampilan atau hobi tersebut.",
+    "Selalu berusaha untuk belajar dan berkembang, baik itu melalui membaca, mengikuti kursus, atau mendengarkan podcast yang inspiratif.",
+    "Jangan takut untuk mengambil risiko dan mencoba hal-hal baru. Pergunakan setiap pengalaman sebagai kesempatan untuk belajar dan tumbuh."
+  ]
+},
+{
+  "tag": "dukungan_online",
+  "patterns": [
+    "Apakah ada sumber daya kesehatan mental online?",
+    "Bagaimana saya bisa mendapatkan dukungan secara online?",
+    "Saya butuh bantuan segera, apa yang bisa saya lakukan secara online?"
+  ],
+  "responses": [
+    "Anda bisa mencari forum atau komunitas online yang mendukung kesehatan mental, atau mencari bantuan dari layanan konseling daring.",
+    "Ada banyak aplikasi dan situs web yang menyediakan informasi, dukungan, dan layanan konseling online bagi mereka yang membutuhkan.",
+    "Jangan ragu untuk mencari bantuan dari profesional kesehatan mental secara online jika Anda membutuhkannya. Banyak dari mereka menawarkan sesi konseling melalui telepon atau video call."
+  ]
+},
+{
+  "tag": "motivasi",
+  "patterns": [
+    "Saya merasa kehilangan motivasi, bagaimana cara mengatasi ini?",
+    "Bagaimana saya bisa tetap termotivasi?",
+    "Apa yang bisa saya lakukan jika saya merasa malas?"
+  ],
+  "responses": [
+    "Cobalah untuk menetapkan tujuan yang jelas dan memecahnya menjadi langkah-langkah kecil yang dapat Anda capai setiap hari.",
+    "Cari tahu apa yang membuat Anda termotivasi dan fokus pada hal-hal tersebut. Ingatkan diri sendiri akan tujuan Anda dan mengapa Anda memulai.",
+    "Berikan penghargaan pada diri sendiri setiap kali Anda mencapai tujuan atau menyelesaikan tugas. Ini dapat membantu meningkatkan motivasi Anda."
+  ]
+},
+{
+  "tag": "pencegahan_burnout",
+  "patterns": [
+    "Bagaimana saya bisa mencegah burnout?",
+    "Apa yang harus saya lakukan jika saya merasa kelelahan secara emosional?",
+    "Bagaimana cara menjaga keseimbangan antara pekerjaan dan hidup pribadi?"
+  ],
+  "responses": [
+    "Penting untuk mengatur waktu istirahat dan menghindari beban kerja yang berlebihan. Prioritaskan kesehatan dan keseimbangan Anda.",
+    "Coba atur batas waktu untuk diri sendiri dan jangan ragu untuk mengatakan tidak ketika Anda merasa terlalu lelah atau terbebani.",
+    "Temukan kegiatan di luar pekerjaan yang membuat Anda bahagia dan terhubung dengan orang-orang yang Anda cintai untuk menjaga keseimbangan hidup Anda."
+  ]
+},
+{
+  "tag": "dukungan_sosial",
+  "patterns": [
+    "Bagaimana saya bisa mencari dukungan sosial?",
+    "Saya merasa kesepian, apa yang harus saya lakukan?",
+    "Bagaimana cara membangun hubungan yang sehat dengan orang lain?"
+  ],
+  "responses": [
+    "Cari kegiatan atau komunitas yang sesuai dengan minat atau hobi Anda, dan temukan teman sebaya yang memiliki minat yang sama.",
+    "Jangan ragu untuk mencari bantuan dari teman atau keluarga ketika Anda merasa kesepian atau membutuhkan dukungan emosional.",
+    "Berpartisipasi dalam kegiatan sosial seperti acara kelompok, pertemuan komunitas, atau kelas seni juga dapat membantu Anda membangun hubungan yang sehat dengan orang lain."
+  ]
+},
+{
+  "tag": "pemulihan",
+  "patterns": [
+    "Bagaimana cara memulihkan diri setelah mengalami krisis?",
+    "Saya merasa putus asa, apa yang harus saya lakukan?",
+    "Bagaimana saya bisa kembali ke kehidupan normal setelah mengalami kesulitan?"
+  ],
+  "responses": [
+    "Ingatlah bahwa pemulihan adalah proses yang berkelanjutan. Berikan waktu bagi diri Anda sendiri untuk beristirahat dan memulihkan diri.",
+    "Jangan ragu untuk mencari bantuan dari profesional kesehatan mental jika Anda merasa kesulitan atau putus asa.",
+    "Cobalah untuk fokus pada hal-hal kecil yang membuat Anda bahagia dan merasa bersyukur setiap hari. Ini dapat membantu memperkuat Anda selama proses pemulihan."
+  ]
+},
+{
+  "tag": "perawatan_krisis",
+  "patterns": [
+    "Apa yang harus saya lakukan jika saya mengalami krisis kesehatan mental?",
+    "Saya merasa sangat putus asa, apa yang harus saya lakukan sekarang?",
+    "Bagaimana saya bisa mencari bantuan jika saya dalam bahaya?"
+  ],
+  "responses": [
+    "Jika Anda dalam bahaya atau merasa tidak aman, segera hubungi layanan darurat atau temukan seseorang yang dapat membantu Anda.",
+    "Jangan ragu untuk mencari bantuan dari profesional kesehatan mental, teman, atau anggota keluarga yang Anda percayai jika Anda mengalami krisis.",
+    "Anda juga bisa mencoba menghubungi hotline bantuan kesehatan mental atau mencari fasilitas kesehatan mental setempat untuk mendapatkan bantuan darurat."
+  ]
+},
+{
+  "tag": "penerimaan_diri",
+  "patterns": [
+    "Bagaimana saya bisa menerima diri saya sendiri?",
+    "Saya sering merasa tidak cukup baik, apa yang harus saya lakukan?",
+    "Bagaimana cara membangun rasa percaya diri yang positif?"
+  ],
+  "responses": [
+    "Cobalah untuk mengganti pikiran negatif tentang diri sendiri dengan pikiran yang lebih positif dan penghargaan terhadap diri sendiri.",
+    "Fokuslah pada kekuatan dan prestasi Anda, dan ingatkan diri Anda sendiri akan nilai-nilai dan kualitas positif yang Anda miliki.",
+    "Praktekkan self-compassion dan beri diri Anda sendiri cinta dan penghargaan yang sama seperti yang Anda berikan kepada orang lain."
+  ]
+},
+{
+  "tag": "pengelolaan_kecemasan",
+  "patterns": [
+    "Bagaimana saya bisa mengelola kecemasan saya?",
+    "Saya sering merasa cemas, apa yang harus saya lakukan?",
+    "Apa tips untuk mengatasi serangan kecemasan?"
+  ],
+  "responses": [
+    "Cobalah teknik pernapasan dalam atau meditasi saat Anda merasa cemas untuk menenangkan pikiran dan tubuh Anda.",
+    "Identifikasi pemicu kecemasan Anda dan cari strategi yang membantu Anda merasa lebih tenang, seperti berbicara dengan seseorang yang Anda percayai atau menulis jurnal.",
+    "Jangan ragu untuk mencari bantuan dari profesional kesehatan mental jika kecemasan Anda mengganggu kehidupan sehari-hari Anda."
+  ]
+},
+{
+  "tag": "lawakan_ringan",
+  "patterns": [
+    "Ceritakan sebuah lelucon!",
+    "Saya butuh sedikit humor.",
+    "Kamu bisa membuat saya tertawa?",
+    "Ada yang bisa membuat saya tersenyum?"
+  ],
+  "responses": [
+    "Kenapa ikan tidak bisa bermain piano? Karena mereka tidak punya jari!",
+    "Apa yang dikatakan seorang jagung ketika dia ditekan? 'Aduh! Jagung!'",
+    "Kenapa semut suka pergi ke pesta? Karena mereka selalu diundang!",
+    "Apa yang diberikan ke kucing yang kehilangan jari-jarinya? Mitologi Yoonicorns!",
+    "Kenapa buku-buku memiliki masa lalu? Karena mereka memiliki cerita!"
+  ]
+},
+{
+  "tag": "pesan_motivasi",
+  "patterns": [
+    "Bisakah kamu memberikan sedikit motivasi?",
+    "Saya merasa sedikit rendah diri hari ini.",
+    "Ada kata-kata bijak yang bisa kamu bagikan?",
+    "Saya butuh semangat!"
+  ],
+  "responses": [
+    "Setiap langkah kecil menuju tujuanmu adalah kemajuan. Tetaplah bergerak maju!",
+    "Ingatlah bahwa setiap tantangan adalah kesempatan untuk tumbuh dan belajar. Anda lebih kuat dari yang Anda pikirkan!",
+    "Saat Anda merasa putus asa, ingatlah bahwa ini hanyalah satu bab dalam kisah hidup Anda. Halaman berikutnya bisa menjadi yang terbaik!",
+    "Anda memiliki potensi yang luar biasa dan kemampuan untuk mengatasi segala rintangan yang menghadang. Percayalah pada diri sendiri!"
+  ]
+},
+{
+  "tag": "motivasi_diri",
+  "patterns": [
+    "Saya merasa sangat lelah dan kurang termotivasi hari ini.",
+    "Bagaimana saya bisa menemukan kembali motivasi untuk bekerja?",
+    "Apa yang bisa saya lakukan jika saya merasa kehilangan semangat?"
+  ],
+  "responses": [
+    "Coba lakukan istirahat sebentar dan tarik napas dalam-dalam. Terkadang, istirahat sebentar bisa membantu menyegarkan pikiran dan meningkatkan motivasi.",
+    "Ingatkan diri Anda akan tujuan dan impian Anda. Bayangkan bagaimana Anda akan merasa ketika mencapai tujuan tersebut, dan gunakan itu sebagai sumber motivasi.",
+    "Cari dukungan dari rekan kerja atau teman terdekat. Berbicara dengan seseorang yang Anda percayai bisa membantu mengurangi beban dan meningkatkan semangat."
+  ]
+},
+{
+  "tag": "self_care",
+  "patterns": [
+    "Apa yang bisa saya lakukan untuk merawat diri saya sendiri saat merasa lelah?",
+    "Bagaimana cara saya merawat diri ketika saya merasa kelelahan?",
+    "Apakah ada kegiatan perawatan diri yang dapat membantu saya mengatasi kelelahan?"
+  ],
+  "responses": [
+    "Luangkan waktu untuk diri sendiri dan lakukan kegiatan yang Anda nikmati, seperti membaca buku, mendengarkan musik, atau berjalan-jalan di luar.",
+    "Praktikkan olahraga ringan atau yoga untuk meredakan ketegangan fisik dan mental. Gerakan tubuh dapat membantu meningkatkan energi dan mood Anda.",
+    "Pastikan Anda mendapatkan tidur yang cukup dan makan makanan sehat. Nutrisi yang baik dan tidur yang cukup dapat membantu meningkatkan stamina dan fokus Anda."
+  ]
+},
+{
+  "tag": "goal_setting",
+  "patterns": [
+    "Bagaimana saya bisa tetap fokus pada tujuan saya saat saya merasa lelah?",
+    "Apa strategi yang efektif untuk tetap berpikiran positif dan mencapai tujuan saat lelah?",
+    "Bagaimana saya bisa memotivasi diri sendiri untuk tetap produktif saat merasa lelah?"
+  ],
+  "responses": [
+    "Buatlah daftar prioritas dan fokus pada tugas-tugas yang paling penting terlebih dahulu. Menyelesaikan tugas-tugas kecil dapat membantu meningkatkan motivasi Anda.",
+    "Bagi tujuan besar menjadi tujuan-tujuan kecil yang lebih mudah dicapai. Merayakan setiap langkah kecil ke arah tujuan akhir dapat membantu menjaga semangat Anda tetap tinggi.",
+    "Berikan diri Anda penghargaan atau hadiah kecil setiap kali Anda mencapai sebuah tujuan. Ini dapat memberikan dorongan tambahan untuk tetap fokus dan bersemangat."
+  ]
+},
+{
+  "tag": "time_management",
+  "patterns": [
+    "Bagaimana saya bisa mengelola waktu saya lebih efektif saat merasa lelah?",
+    "Apa tips untuk meningkatkan produktivitas saat saya merasa kelelahan?",
+    "Bagaimana cara saya tetap fokus dan berpikiran jernih saat lelah?"
+  ],
+  "responses": [
+    "Coba atur jadwal kerja Anda sedemikian rupa sehingga Anda memiliki waktu istirahat yang cukup di antara tugas-tugas. Mengelola waktu istirahat dapat membantu menghindari kelelahan yang berlebihan.",
+    "Gunakan teknik manajemen waktu seperti metode Pomodoro, di mana Anda bekerja selama 25 menit dan kemudian istirahat selama 5 menit. Siklus ini dapat membantu menjaga fokus dan produktivitas Anda.",
+    "Buatlah daftar tugas yang jelas dan prioritas untuk setiap hari. Fokus pada tugas-tugas yang paling penting terlebih dahulu dan jangan ragu untuk menunda tugas-tugas yang kurang penting."
+  ]
+},
+{
+  "tag": "positif_thinking",
+  "patterns": [
+    "Bagaimana saya bisa mempertahankan pikiran positif saat merasa lelah?",
+    "Apa yang bisa saya lakukan untuk memerangi pemikiran negatif saat saya merasa kelelahan?",
+    "Apakah ada latihan kognitif yang dapat membantu saya tetap optimis saat lelah?"
+  ],
+  "responses": [
+    "Cobalah untuk menggeser fokus Anda dari hal-hal negatif menjadi hal-hal positif. Mencatat hal-hal yang Anda syukuri setiap hari dapat membantu meningkatkan suasana hati Anda.",
+    "Praktikkan afirmasi positif setiap hari, seperti mengatakan kepada diri sendiri bahwa Anda mampu mengatasi tantangan apa pun yang datang.",
+    "Berbicara dengan diri sendiri dengan kasih sayang dan pengertian. Ingatkan diri Anda bahwa setiap orang mengalami hari yang sulit dan itu normal."
+  ]
+},
+{
+  "tag": "motivasi_kerja",
+  "patterns": [
+    "Bagaimana saya bisa tetap termotivasi dalam pekerjaan?",
+    "Apa yang bisa saya lakukan untuk mengatasi kelelahan kerja?",
+    "Apakah ada tips untuk meningkatkan semangat di tempat kerja?"
+  ],
+  "responses": [
+    "Tetapkan tujuan yang jelas dan terukur untuk diri Anda sendiri. Memiliki tujuan yang jelas dapat memberikan fokus dan motivasi yang diperlukan.",
+    "Cari tahu apa yang membuat Anda bersemangat dalam pekerjaan Anda dan cobalah untuk menemukan cara untuk mengintegrasikan hal-hal tersebut ke dalam tugas Anda sehari-hari.",
+    "Jangan ragu untuk meminta bantuan atau dukungan dari rekan kerja atau atasan jika Anda merasa terlalu lelah atau tertekan. Terkadang, berbagi beban dapat membuatnya lebih mudah untuk ditangani."
+  ]
+},
+{
+  "tag": "istirahat_sebentar",
+  "patterns": [
+    "Apakah ada cara untuk merasa lebih segar setelah istirahat sebentar?",
+    "Bagaimana saya bisa mengambil istirahat singkat tanpa merasa bersalah?",
+    "Apakah ada manfaat dalam mengambil istirahat sebentar di tengah hari?"
+  ],
+  "responses": [
+    "Berjalan-jalan sebentar di luar ruangan atau melakukan peregangan ringan dapat membantu meningkatkan sirkulasi darah dan memberikan energi tambahan.",
+    "Cobalah untuk mengatur waktu istirahat Anda dengan baik sehingga Anda dapat kembali ke pekerjaan dengan pikiran yang segar dan semangat yang baru.",
+    "Istirahat sebentar di tengah hari dapat membantu meningkatkan produktivitas dan kesejahteraan secara keseluruhan. Jadi, jangan ragu untuk mengambil istirahat jika Anda merasa perlu."
+  ]
+},
+{
+  "tag": "refleksi_diri",
+  "patterns": [
+    "Bagaimana cara melakukan refleksi diri saat merasa lelah?",
+    "Apakah ada manfaat dalam melakukan refleksi diri di tengah-tengah hari?",
+    "Apa yang bisa saya pelajari dari pengalaman saya saat merasa lelah?"
+  ],
+  "responses": [
+    "Luangkan waktu sejenak untuk merefleksikan pencapaian Anda dan menghargai diri sendiri atas pekerjaan yang telah Anda lakukan. Ini dapat memberikan dorongan motivasi tambahan.",
+    "Refleksi diri dapat membantu Anda memahami penyebab kelelahan atau kurangnya motivasi Anda, dan memungkinkan Anda mengidentifikasi langkah-langkah yang perlu diambil untuk mengatasi masalah tersebut.",
+    "Pikirkan tentang hal-hal yang telah Anda pelajari atau capai, bahkan dalam kondisi yang sulit. Ini dapat membantu membangun rasa pencapaian dan motivasi di masa depan."
+  ]
+},
+{
+  "tag": "reaksi_positif",
+  "patterns": [
+    "Bagaimana cara menjaga sikap positif saat merasa lelah?",
+    "Apakah ada manfaat dalam mempertahankan sikap yang positif di tempat kerja?",
+    "Apa yang bisa saya lakukan untuk tetap optimis dalam situasi yang menantang?"
+  ],
+  "responses": [
+    "Coba fokus pada hal-hal yang Anda kendalikan dan temukan solusi untuk masalah yang mungkin Anda hadapi. Memiliki sikap proaktif dapat membantu mengurangi stres dan kekhawatiran.",
+    "Praktikkan rasa syukur dan apresiasi terhadap hal-hal baik dalam hidup Anda, baik di tempat kerja maupun di luar sana. Ini dapat membantu meningkatkan suasana hati dan memperkuat ketahanan mental Anda.",
+    "Jangan ragu untuk mencari sumber inspirasi atau motivasi, seperti kutipan atau cerita inspiratif, untuk membantu menjaga semangat Anda tetap tinggi dalam situasi yang sulit."
+  ]
+},
+{
+  "tag": "tim_support",
+  "patterns": [
+    "Apakah ada manfaat dalam mendapatkan dukungan dari tim saat merasa lelah?",
+    "Bagaimana cara mencari dukungan dari rekan kerja atau atasan ketika saya merasa lelah?",
+    "Apa yang bisa saya lakukan jika saya memerlukan bantuan dari tim saat merasa lelah?"
+  ],
+  "responses": [
+    "Mendapatkan dukungan dari tim dapat membantu Anda merasa didukung dan dihargai, serta membagi beban kerja sehingga Anda tidak merasa terlalu tertekan.",
+    "Jangan ragu untuk berbicara dengan rekan kerja atau atasan jika Anda merasa lelah atau kelebihan beban. Mereka mungkin bisa membantu menemukan solusi atau merancang kembali tugas-tugas Anda.",
+    "Berbagi pengalaman dengan rekan kerja yang lain tentang bagaimana mereka mengatasi kelelahan atau motivasi yang rendah juga dapat memberikan perspektif baru dan ide-ide yang berguna."
+  ]
+}
+]
+}
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Mood Tracking</title>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: []
+            });
+            calendar.render();
+        });
+    </script>
+  
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap-icons.css" >
+    <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/art.css">
+    <link rel="stylesheet" href="../static/css/calendar.css"> 
+</head>
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/Logo (1).png" alt="Logo"></a></li>
+                <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>Amethyst</span></strong>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('about') }}">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('suggestion') }}">Suggestion</a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <section class="calendar-section">
+            <div class="container">
+                <div class="calendar-container">
+                    <div id="calendar"></div>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <form id="moods" action="{{ url_for('cal') }}" method="POST">
+                                <label for="mood">Mood:</label>
+                                <input type="text" id="mood" name="mood" required><br><br>
+                                <label for="date">Date:</label>
+                                <input type="date" id="date" name="date" required><br><br>
+                                <button type="submit">Add</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="{{ url_for ('home') }}">Amethyst</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2024 <strong> Amethyst</strong></p>
+                    <br>
+                </div>
+
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="{{ url_for ('about') }}" class="footer-menu-link">About</a></li>
+                        <li class="footer-menu-item"><a href="{{ url_for ('mind_body') }}" class="footer-menu-link">Mind&Body</a></li>
+                        <li class="footer-menu-item"><a href="{{ url_for ('recharge_explore') }}" class="footer-menu-link">Recharge&Explore</a></li>
+                        <li class="footer-menu-item"><a href="{{ url_for ('suggestion') }}" class="footer-menu-link">Suggestion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/Headroom.js"></script>
+    <script src="../static/js/jQuery.headroom.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: []
+            });
+            calendar.render();
+
+            // Menampilkan modal saat pengguna mengklik pada tanggal di kalender
+            calendarEl.addEventListener('click', function(info) {
+                var date = info.dateStr;
+                document.getElementById('date').value = date; // Mengisi nilai input date dengan tanggal yang diklik
+                modal.style.display = "block"; // Menampilkan modal
+            });
+
+            // Menutup modal saat mengklik tombol close (x)
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Menutup modal saat mengklik di luar modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Function to add event to calendar
+            function addEventToCalendar(mood, date) {
+                var calendarApi = calendar.getApi();
+                calendarApi.addEvent({
+                    title: mood,
+                    start: date
+                });
+            }
+        });
+    </script>
+</body>
+</html>

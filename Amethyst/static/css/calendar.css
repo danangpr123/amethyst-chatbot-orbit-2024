@@ -1,0 +1,44 @@
+/* Gaya untuk kalender */
+#calendar {
+    background: linear-gradient(to bottom, #ffffff, #9b9c9d); /* Contoh gradien latar belakang */
+    border-radius: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  }
+  .calendar-section {
+    margin-top: 200px; /* Atur margin atas sesuai kebutuhan */
+    margin-bottom: 100px;
+  }  
+  
+  .fc-day:hover {
+    transform: scale(1.05); /* Efek hover untuk tanggal */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Gaya untuk tombol navigasi kalender */
+  .fc-button {
+    background-color: #ffffff; /* Warna tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .fc-button:hover {
+    background-color: #ffffff; /* Warna tombol saat dihover */
+  }
+  
+  /* Gaya untuk tanggal yang dipilih */
+  .fc-day.fc-day-today {
+    background-color: #789cdf; /* Warna latar belakang tanggal hari ini */
+    color: #fff; /* Warna teks tanggal hari ini */
+  }
+  
+  /* Gaya untuk teks bulan dan tahun */
+  .fc-toolbar-title {
+    font-family: 'Inter', sans-serif; /* Gunakan font kustom */
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+  }
+  

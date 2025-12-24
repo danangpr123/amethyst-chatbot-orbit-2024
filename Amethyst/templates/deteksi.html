@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Detection</title>
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+        <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+
+        <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+
+        <link rel="stylesheet"type="text/css" href="../static/css/art.css">
+        <style>
+            /* Tambahkan margin-top untuk judul */
+            h1 {
+                margin-top: 200px;
+            }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="logo" href="{{ url_for ('home') }}"><img src="../static/images/logo/Logo (1).png" alt="Logo"></a>
+            <a class="navbar-brand" href="{{ url_for ('home') }}"> <strong><span>Amethyst</span></strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for ('about') }}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for ('mood') }}">Mood Tracking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for ('suggestion') }}">Suggestion</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center mb-5">Stress Detection</h1> <!-- Tambahkan margin-bottom jika diperlukan -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form id="textForm" action="/predict" method="POST">
+                    <div class="mb-4">
+                        <label for="text" class="form-label">How have you been feeling in your work environment lately?</label>
+                        <textarea class="form-control" id="text" name="text" rows="8" placeholder="Type your text here..."></textarea>
+                    </div>
+                    <div class="text-center mb-5"> 
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="{{ url_for ('home') }}">Amethyst</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2024 <strong> Amethyst</strong></p>
+                    <br>
+                </div>
+
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="{{ url_for ('about') }}" class="footer-menu-link">About</a></li>
+
+                        <li class="footer-menu-item"><a href="{{ url_for ('mind_body') }}" class="footer-menu-link">Mind&Body</a></li>
+
+                        <li class="footer-menu-item"><a href="{{ url_for ('recharge_explore') }}" class="footer-menu-link">Recharge&Explore</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                        </li>
+
+                        <li class="footer-menu-item"><a href="{{ url_for ('suggestion') }}" class="footer-menu-link">Suggestion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+            <!-- JAVASCRIPT FILES -->
+            <script src="../static/js/jquery.min.js"></script>
+            <script src="../static/js/bootstrap.bundle.min.js"></script>
+            <script src="../static/js/Headroom.js"></script>
+            <script src="../static/js/jQuery.headroom.js"></script>
+            <script src="../static/js/slick.min.js"></script>
+            <script src="../static/js/custom.js"></script>
+</body>
+</html>

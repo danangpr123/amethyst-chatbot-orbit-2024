@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Catatan Jurnal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Edit Catatan Jurnal</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="note">Catatan:</label>
+                <textarea class="form-control" id="note" name="note" rows="5" required>{{ entry[3] }}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+        </form>
+    </div>
+</body>
+</html>

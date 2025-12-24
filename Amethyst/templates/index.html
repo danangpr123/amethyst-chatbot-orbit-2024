@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Home</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+        <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+
+        <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+
+        <link rel="stylesheet"type="text/css" href="../static/css/art.css"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/Logo (1).png" alt="Logo"></a></li>
+                    <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>Amethyst</span><h1 class="custom-heading"> Welcome, {{ session['username'] }}</h1></strong></a>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('about') }}">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('suggestion') }}">Suggestion</a>
+                            </li>
+                        </ul>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                            </ul>
+                        </li>
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <section class="slick-slideshow">   
+                <div class="slick-custom">
+                    <img src="../static/images/slideshow/gambarhome1.jpeg" class="img-fluid" alt="">
+
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">Deteksi Stress</h1>
+
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Jangan biarkan stress menghalangimu, lakukan deteksi dini depresi bersama kami.</p>
+
+                                    <a href="{{ url_for ('deteksi') }}" class="btn custom-btn">Ayo cek kondisimu sekarang!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick-custom">
+                    <img src="../static/images/slideshow/gambarhome2.jpg" class="img-fluid" alt="">
+
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">Chatbot Curhat</h1>
+
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Luapkan Perasaan dan Ceritakan Masalah Pekerjaanmu disini!</p>
+
+                                    <a href="#" class="btn custom-btn">Click Here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about section-padding">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h2 class="mb-5">Let’s start your healing journey <span>with us!</span></h2>
+                        </div>
+
+                        <div class="col-lg-2 col-12 mt-auto mb-auto">
+                            <ul class="nav nav-pills mb-5 mx-auto justify-content-center align-items-center" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Introduction</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-10 col-12">
+                            <div class="tab-content mt-2" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                                    <div class="row">
+                                        <div class="col-lg-7 col-12">
+                                            <img src="../static/images/header/about us ref (1).jpg" class="img-fluid" alt="">
+                                        </div>
+
+                                        <div class="col-lg-5 col-12">
+                                            <div class="d-flex flex-column h-100 ms-lg-4 mt-lg-0 mt-5">
+                                                <h4 class="mb-3"><span>A</span>bout us</h4>
+
+                                                <p>Welcome to Amethyst!</p>
+
+                                                <p>We are an innovative platform dedicated to improving mental health in the workplace.
+                                                    At Amethyst, we believe that mental health is a crucial aspect of well-being and productivity in the workplace. Therefore, we are committed to providing easily accessible and effective solutions to help individuals manage stress, anxiety, and other mental health issues.
+                                                    We are committed to supporting and accompanying you in the process of healing and recovery from bereavement, helping you move from grief to growth. We support the improvement of employee performance in the company through human resource development and employee welfare.</p>
+                                                    
+                                                <div class="mt-2 mt-lg-auto">
+                                                    <a href="{{ url_for ('about') }}" class="custom-link mb-2">
+                                                        Learn more about us
+                                                        <i class="bi-arrow-right ms-2"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                                <section class="team section-padding">
+                                    <div class="container">
+                                        <div class="row">
+                    
+                                            <div class="col-12">
+                                                <h2 class="mb-5">Meet our <span>team</span></h2>
+                                            </div>
+                    
+                                            <div class="col-lg-4 mb-4 col-12">
+                                                <div class="team-thumb d-flex align-items-center">
+                                                    <img src="../static/images/people/danang.jpg" class="img-fluid custom-circle-image team-image me-4" alt="">
+                    
+                                                    <div class="team-info">
+                                                        <h5 class="mb-0">Danang</h5>
+                                                        <strong class="text-muted">UX, Backend</strong>
+                    
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#danang">
+                                                          <i class="bi-plus-circle-fill"></i>
+                                                        </button>
+                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-lg-4 mb-4 col-12">
+                                                <div class="team-thumb d-flex align-items-center">
+                                                    <img src="../static//images/people/siska.jpg" class="img-fluid custom-circle-image team-image me-4" alt="">
+                    
+                                                    <div class="team-info">
+                                                        <h5 class="mb-0">Siska </h5>
+                                                        <strong class="text-muted">UI</strong>
+                    
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#siska">
+                                                          <i class="bi-plus-circle-fill"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-lg-4 mb-lg-0 mb-4 col-12">
+                                                <div class="team-thumb d-flex align-items-center">
+                                                    <img src="../static/images/people/maya.jpg" class="img-fluid custom-circle-image team-image me-4" alt="">
+                    
+                                                    <div class="team-info">
+                                                        <h5 class="mb-0">Maya</h5>
+                                                        <strong class="text-muted">Data Scientist</strong>
+                    
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#maya">
+                                                          <i class="bi-plus-circle-fill"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                 
+                                <section class="team section-padding">
+                                    <div class="container">
+                                        <div class="row">
+                    
+                                            <div class="col-lg-4 mb-4 col-12">
+                                                <div class="team-thumb d-flex align-items-center">
+                                                    <img src="../static/images/people/zahwan.jpg" class="img-fluid custom-circle-image team-image me-4" alt="">
+                    
+                                                    <div class="team-info">
+                                                        <h5 class="mb-0"> Zahwan </h5>
+                                                        <strong class="text-muted">ML Enginering</strong>
+                    
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#zahwan">
+                                                          <i class="bi-plus-circle-fill"></i>
+                                                        </button>
+                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-lg-4 mb-4 col-12">
+                                                <div class="team-thumb d-flex align-items-center">
+                                                    <img src="../static/images/people/maulidia.jpg" class="img-fluid custom-circle-image team-image me-4" alt="">
+                    
+                                                    <div class="team-info">
+                                                        <h5 class="mb-0">Maulidia</h5>
+                                                        <strong class="text-muted">UI Designer</strong>
+                    
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#maulidia">
+                                                          <i class="bi-plus-circle-fill"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-lg-4 mb-lg-0 mb-4 col-12">
+                                                <div class="team-thumb d-flex align-items-center">
+                                                    <img src="../static/images/people/salsabila.jpg" class="img-fluid custom-circle-image team-image me-4" alt="">
+                    
+                                                    <div class="team-info">
+                                                        <h5 class="mb-0">Salsabilla</h5>
+                                                        <strong class="text-muted">Laporan PA</strong>
+                    
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn custom-modal-btn" data-bs-toggle="modal" data-bs-target="#salsabilla">
+                                                          <i class="bi-plus-circle-fill"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </section> 
+
+        </main>
+        <div class="container"id="chatbox-container">
+            <div class="chatbox">
+                <div class="chatbox__support">
+                    <div class="chatbox__header">
+                        <div class="chatbox__image--header">
+                            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                        </div>
+                        <div class="chatbox__content--header">
+                            <h4 class="chatbox__heading--header">siAmet  </h4>
+                            <p class="chatbox__description--header">Hi.My name Amet. Kamu bisa ceritakan apapun masalahmu disini</p>
+                        </div>
+                    </div>
+                    <div class="chatbox__messages" id="chat-messages">
+                        <!-- Pesan-pesan chat akan ditampilkan di sini -->
+                    </div>
+                    <div class="chatbox__footer">
+                        <input type="text" placeholder="Write a message..." id="user-input">
+                        <button class="chatbox__send--footer send__button">Send</button>
+                    </div>
+                </div>
+                <div class="chatbox__button">
+                    <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+                </div>
+            </div>
+        </div>
+  
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="{{ url_for ('home') }}">Amethyst</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2024 <strong> Amethyst</strong></p>
+                        <br>
+                    </div>
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="{{ url_for ('about') }}" class="footer-menu-link">About</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('mind_body') }}" class="footer-menu-link">Mind&Body</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('recharge_explore') }}" class="footer-menu-link">Recharge&Explore</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('suggestion') }}" class="footer-menu-link">Suggestion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- TEAM MEMBER MODAL Danang -->
+        <div class="modal fade" id="danang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <h3 class="modal-title" id="exampleModalLabel">Danang Prayogi</h3>
+
+                        <h6 class="text-muted">UX, Backend</h6>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5 class="mb-4">Universitas Indraprasta PGRI</h5>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-12">
+                                <p>Teknik Informatika</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <p>Apapun peranmu untuk semesta, jadilah.</p>
+                            </div>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li class="me-3"><strong>Where to find?</strong></li>
+                            <li><a href="https://www.instagram.com/danangprayogi7/" class="social-icon-link bi-instagram"></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TEAM MEMBER MODAL Zahwan-->
+        <div class="modal fade" id="zahwan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <h3 class="modal-title" id="exampleModalLabel">Triananda Muhammad Zahwan Firdaus</h3>
+
+                        <h6 class="text-muted">ML Enginering</h6>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5 class="mb-4">Universitas Esa Unggul</h5>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-12">
+                                <p>Teknik Informatika</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <p>Who dares wins.</p>
+                            </div>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li class="me-3"><strong>Where to find?</strong></li>
+                            <li><a href="https://www.instagram.com/zahwan_01?igsh=Y2l1cjd2YjNvYWZl" class="social-icon-link bi-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TEAM MEMBER MODAL Siska-->
+        <div class="modal fade" id="siska" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <h3 class="modal-title" id="exampleModalLabel">Siska Putri</h3>
+
+                        <h6 class="text-muted">UI</h6>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5 class="mb-4">Universitas Widyatama</h5>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-12">
+                                <p>Manajemen</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <p>No risk,no story.</p>
+                            </div>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li class="me-3"><strong>Where to find?</strong></li>
+                            <li><a href="https://www.instagram.com/hermosavidasiska?igsh=YTV2Mm40d2xsenYx&utm_source=qr" class="social-icon-link bi-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TEAM MEMBER MODAL Mulidia-->
+        <div class="modal fade" id="maulidia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <h3 class="modal-title" id="exampleModalLabel">Maulidia Sita Aswatun Anjani</h3>
+
+                        <h6 class="text-muted">UI Designer</h6>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5 class="mb-4">Universitas Pendidikan Indonesia</h5>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-12">
+                                <p>Sistem Telekomunikasi</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <p>Never Feel Alone.</p>
+                            </div>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li class="me-3"><strong>Where to find?</strong></li>
+                            <li><a href="https://www.instagram.com/maulidiasitaa_?igsh=Z2QwZ3U1OW9iOXEz" class="social-icon-link bi-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TEAM MEMBER MODAL Salsabila-->
+        <div class="modal fade" id="salsabilla" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <h3 class="modal-title" id="exampleModalLabel">Salsabilla Nurwindya Rohman</h3>
+
+                        <h6 class="text-muted">Laporan PA</h6>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5 class="mb-4">Universitas Singaperbangsa Karawang </h5>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-12">
+                                <p>Akuntansi</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <p>Everything is a choice</p>
+                            </div>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li class="me-3"><strong>Where to find?</strong></li>
+                            <li><a href="https://www.instagram.com/shasaaa27_?igsh=NHA3bGVteTlyd2Mz" class="social-icon-link bi-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+                <!-- TEAM MEMBER MODAL Maya-->
+        <div class="modal fade" id="maya" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0">
+                    <div class="modal-header flex-column">
+                        <h3 class="modal-title" id="exampleModalLabel">Maya Tirta Anggraeni</h3>
+
+                        <h6 class="text-muted">Data Scientist</h6>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5 class="mb-4">Sekolah Tinggi Ilmu Ekonomi Dharma Bumiputera</h5>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-12">
+                                <p>Manajemen</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <p>Promise the world</p>
+                            </div>
+                        </div>
+
+                        <ul class="social-icon">
+                            <li class="me-3"><strong>Where to find?</strong></li>
+                            <li><a href="https://www.instagram.com/mayatrta?igsh=MWYycGpxdGs0MHp6OQ%3D%3D&utm_source=qr" class="social-icon-link bi-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- JAVASCRIPT FILES -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/Headroom.js"></script>
+        <script src="../static/js/jQuery.headroom.js"></script>
+        <script src="../static/js/slick.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+        <script src="../static/js/app.js"></script>
+        <script>
+            var $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+        </script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                const chatbox = new Chatbox();
+                chatbox.display();
+                document.addEventListener('DOMContentLoaded', function() {
+});
+
+        });
+        </script>
+    </body>
+</html>

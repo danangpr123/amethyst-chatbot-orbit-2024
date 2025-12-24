@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Recharge & Explore</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+        <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+
+        <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+
+        <link rel="stylesheet"type="text/css" href="../static/css/art.css">
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/Logo (1).png" alt="Logo"></a></li>
+                    <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>Amethyst</span></strong>
+                    </a>
+
+            
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('about') }}">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('suggestion') }}">Suggestion</a>
+                            </li>
+                        </ul>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+            <section class="products section-padding">
+                <div class="container">
+                    <div class="row text-center"> 
+                        <div class="col-12">
+                            <h2 class="mb-2">Lets Recharge and Explore</h2>
+                            <p class="mb-5">Temukan tempat-tempat baru yang menyenangkan, {{ session['username'] }}!</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center"> 
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-3">
+                            <div class="product-thumb">
+                                <a href="https://drive.google.com/file/d/1QHDJVA7OgHZyxiEw7g4CD93CfY_vvJ8P">
+                                    <img src="../static/images/explore/1. places to go.jpg" class="img-fluid product-image" alt="">
+                                </a>
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h5 class="product-title mb-0">
+                                            <a href="https://drive.google.com/file/d/1QHDJVA7OgHZyxiEw7g4CD93CfY_vvJ8P" class="product-title-link">Place To Go</a>
+                                        </h5>
+                                        <p class="product-p">Mau kemana kita hari ini</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-3">
+                            <div class="product-thumb">
+                                <a href="https://drive.google.com/file/d/1yNMEdUNVToWZeosPNxQyertGkVaNmu3n">
+                                    <img src="../static/images/explore/2. fun activities.jpg" class="img-fluid product-image" alt="">
+                                </a>
+                                <div class="product-info d-flex">
+                                    <div>
+                                        <h5 class="product-title mb-0">
+                                            <a href="https://drive.google.com/file/d/1yNMEdUNVToWZeosPNxQyertGkVaNmu3n" class="product-title-link">Fun Activities</a>
+                                        </h5>
+                                        <p class="product-p">Cari keseruan disini</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>            
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="{{ url_for ('home') }}">Amethyst</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2024 <strong> Amethyst</strong></p>
+                        <br>
+                    </div>
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="{{ url_for ('about') }}" class="footer-menu-link">About</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('mind_body') }}" class="footer-menu-link">Mind&Body</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('recharge_explore') }}" class="footer-menu-link">Recharge&Explore</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('suggestion') }}" class="footer-menu-link">Suggestion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- JAVASCRIPT FILES -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/Headroom.js"></script>
+        <script src="../static/js/jQuery.headroom.js"></script>
+        <script src="../static/js/slick.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+
+
+    </body>
+</html>

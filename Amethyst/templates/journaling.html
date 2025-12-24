@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journaling</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/journal.css">
+</head>
+<body>
+    <div class="container">
+        <div class="journal-box">
+            <h2 class="journal-title">Catatan Jurnal {{ session['username'] }}</h2>
+            <form method="POST" class="journal-form">
+                <div class="form-group">
+                    <label for="date">Tanggal:</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="note">Catatan:</label>
+                    <textarea class="form-control" id="note" name="note" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Simpan Catatan</button>
+            </form>
+            <a href="{{ url_for('mind_body') }}" class="btn btn-secondary btn-back">Kembali</a>
+            <a href="{{ url_for('view_journal') }}" class="btn btn-secondary btn-back">Lihat Jurnal Saya</a>
+        </div>
+    </div>
+</body>
+</html>

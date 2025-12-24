@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/art.css">
+    <style>
+        .article-section {
+            padding: 50px 0;
+        }
+    
+        .article-item {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    
+        .article-link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-decoration: none;
+            color: #000;
+        }
+    
+        .article-link:hover {
+            text-decoration: none;
+            color: #000;
+        }
+    
+        .article-caption {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            flex-grow: 1;
+        }
+    
+        .article-caption h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    
+        .article-caption p {
+            margin-bottom: 0;
+        }
+    
+        
+        .article-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+ 
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+        <nav class="navbar navbar-expand-lg clearfix">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="logo" href="{{ url_for ('home') }}"><img src="../static/images/logo/Logo (1).png" alt="Logo"></a></li>
+                <a class="navbar-brand" href="{{ url_for ('home') }}"><strong><span>Amethyst</span></strong></a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('about') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('suggestion') }}">Suggestion</a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </nav>
+
+        <section class="article-section">
+            <div class="container">
+             <h2 class="text-center mb-4" style="padding-top: 70px;">Articles</h2>
+                <div class="article-grid">
+                    <div class="article-item">
+                        <a href="https://yankes.kemkes.go.id/view_artikel/2232/pentingnya-mental-health-awareness-di-lingkungan-kerja" class="article-link">
+                            <img src="../static/images/artikel/artikel1.jpg" alt="Article 1">
+                            <div class="article-caption">
+                                <h3>Pentingnya Mental Health Awareness di Lingkungan Kerja</h3>
+                                <p>Dalam dunia pekerjaan, tentunya kita akan menghadapi situasi ups and downs. Saat berada di dalam kondisi ups, kita akan merasa bahwa pekerjaan yang kita lakukan dapat memberikan kesejahteraan, kepuasan, kebahagiaan, bahkan dapat membuat kita merasa mencapai aktualisasi diri.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-item">
+                        <a href="https://blog.skillacademy.com/pentingnya-kesehatan-mental" class="article-link">
+                            <img src="../static/images/artikel/artikel2.jpg" alt="Article 2">
+                            <div class="article-caption">
+                                <h3>Pentingnya Kesehatan Mental di Dunia Kerja dan Cara Mengelolanya</h3>
+                                <p>Belakangan ini, isu kesehatan mental sering diperbincangkan oleh banyak kalangan, salah satunya di dunia kerja. Di lingkungan kerja sendiri, kesehatan mental yang stabil dan terjaga akan membuat para karyawan lebih bahagia dan produktif dalam bekerja. Hal ini didorong oleh perusahaan serta para atasan yang suportif dan apresiatif, sehingga para karyawan menjadi lebih semangat dalam mencapai target perusahaan serta menimbun ilmu dari pekerjaan yang dilakukan.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-item">
+                        <a href="https://prosiding-pkmcsr.org/index.php/pkmcsr/article/view/1950/1099" class="article-link">
+                            <img src="../static/images/artikel/artikel3.jpg" alt="Article 3">
+                            <div class="article-caption">
+                                <h3>Pekerja Sehat Produktivitas kerja meningkat: Edukasi kesehatan mental di lingkungan kerja</h3>
+                                <p>Kesehatan mental bagi pekerja sangat diperlukan untuk keamanan dan kenyamanan pekerja di lingkungan kerja.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-item">
+                        <a href="https://ilmu.lpkn.id/2021/03/26/resiliensi-sebuah-seni-untuk-bangkit-dari-keterpurukan/" class="article-link">
+                            <img src="../static/images/artikel/artikel4.jpg" alt="Article 4">
+                            <div class="article-caption">
+                                <h3>Resiliensi: Sebuah Seni untuk Bangkit dari Keterpurukan</h3>
+                                <p>Hidup ada tanpa petunjuk sehingga kita melaluinya dengan jalan yang berbeda-beda. Terkadang kita melewati jalan yang lurus tanpa hambatan, tetapi tak jarang juga kita disesatkan dan berakhir di jalan berliku tak beraspal. Semua orang pasti mengalami lika-liku dari setiap tantangan kehidupan yang kita jalani dan sering kali membuat kita terpuruk.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-item">
+                        <a href="https://journal.actual-insight.com/index.php/decive/article/view/298/1689" class="article-link">
+                            <img src="../static/images/artikel/artikel5.jpg" alt="Article 5">
+                            <div class="article-caption">
+                                <h3>Pengaruh Cyberbullying di Media Sosial Terhadap Kesehatan Mental</h3>
+                                <p>Cyberbullying adalah tindakan bullying atau penindasan yang menggunakan teknologi untuk menyakiti orang lain dengan sengaja dan berulang-ulang (Prabawati, 2013)</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="article-item">
+                        <a href="https://osf.io/preprints/osf/2rhau" class="article-link">
+                            <img src="../static/images/artikel/artikel6.jpg" alt="Article 6">
+                            <div class="article-caption">
+                                <h3>Kewajiban Masyarakat Menerima Edukasi Kesehatan Mental</h3>
+                                <p>Kesehatan mental merupakan komponen mendasar untuk membentuk hubungan sosial, menjaga produktivitas, keseimbangan hidup sehari-hari, dan hubungan seimbang dengan lingkungan. Jika individu sehat secara mental, individu akan dapat terus berkembang dan berkontribusi sebagai masyarakat.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container text-center">
+            <a href="{{ url_for('mind_body') }}" class="btn btn-primary mt-4">Kembali</a>
+        </div>
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/Headroom.js"></script>
+    <script src="../static/js/jQuery.headroom.js"></script>
+    <script src="../static/js/slick.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+</body>
+</html>

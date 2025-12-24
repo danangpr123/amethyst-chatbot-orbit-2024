@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation</title>
+            <!-- CSS FILES -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    
+            <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+            <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+    
+            <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+    
+            <link rel="stylesheet"type="text/css" href="../static/css/art.css">
+    <style>
+        
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        .video-wrapper {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .video-wrapper:hover {
+            transform: scale(1.05);
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            object-fit: cover; /* Menambahkan object-fit */
+        }
+        .caption {
+            text-align: center;
+            color: #000000;
+            margin-top: 10px;
+            font-size: 18px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        main {
+            padding-top: 100px; 
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 100px; 
+        }
+
+    </style>
+</head>
+<body>
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+
+        <nav class="navbar navbar-expand-lg clearfix">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/Logo (1).png" alt="Logo"></a></li>
+                <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>Amethyst</span></strong>
+                </a>
+
+        
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('about') }}">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('suggestion') }}">Suggestion</a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                        </ul>
+                    </li>
+                    
+                </div>
+            </div>
+        </nav>
+    <div class="container">
+        <h2 style="text-align: center; color: #333;">Meditation Videos</h2>
+        <div class="row">
+            <div class="column">
+                <div class="video-wrapper">
+                    <iframe src="https://youtube.com/embed/uTN29kj7e-w?"></iframe>
+                    <p class="caption">10 MIN Guided Meditation To Clear Your Mind & Start New Positive Habits</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/cyMxWXlX9sU?"> </iframe>
+                    <p class="caption">10 Minute Guided Meditation for Positive Energy, Peace & Light 🌤</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/vtOAnC73xtk?"></iframe>
+                    <p class="caption">Powerful Guided Meditation for Healing & Letting Go 🤍</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/kQ0eSj-iy_I?"></iframe>
+                    <p class="caption">10 Minute Guided Meditation For Grief And Dealing With Loss</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/qB6KKQRQzXs?"></iframe>
+                    <p class="caption">Coping with Grief: Guided Spoken Meditation for healing after a loss of a loved one</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/PBI6XZt4VDg?"></iframe>
+                    <p class="caption">Sitting with our Sadness: A meditation for letting go. Calming, relaxing, peaceful.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <a href="{{ url_for('mind_body') }}" class="btn btn-primary mt-4">Kembali</a>
+        </div>
+    </div>
+            <!-- JAVASCRIPT FILES -->
+            <script src="../static/js/jquery.min.js"></script>
+            <script src="../static/js/bootstrap.bundle.min.js"></script>
+            <script src="../static/js/Headroom.js"></script>
+            <script src="../static/js/jQuery.headroom.js"></script>
+            <script src="../static/js/slick.min.js"></script>
+            <script src="../static/js/custom.js"></script>
+</body>
+</html>

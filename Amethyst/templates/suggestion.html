@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Suggestion</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+        <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+
+        <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+
+        <link rel="stylesheet"type="text/css" href="../static/css/art.css">
+        
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/Logo (1).png" alt="Logo"></a></li>
+                    <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>Amethyst</span></strong>
+                    </a>
+
+            
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('about') }}">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ url_for ('suggestion') }}">Suggestion</a>
+                            </li>
+                        </ul>
+
+                        <li class="nav-item dropdown">
+                            <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+            <header class="site-header section-padding-img site-header-image">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 header-info">
+                            <h1>
+                                <span class="d-block text-primary">Say hello to us</span>
+                                <span class="d-block text-dark">love to hear you</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="../static/images/header/suggestion.jpg" class="header-image img-fluid" alt="">
+            </header>
+
+            <section class="team contact section-padding">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-lg-6 col-12">
+                            <h2 class="mb-4">Let's <span>begin</span></h2>
+
+                            <form action="https://formspree.io/f/mbjnzbkl" method="POST">
+                            <form class="contact-form me-lg-5 pe-lg-3" role="form">
+`                           
+                                <div class="form-floating">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
+
+                                    <label for="name">Nama Lengkap</label>
+                                </div>
+
+                                <div class="form-floating my-4">
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
+
+                                    <label for="email">Email</label>
+                                </div>
+                                
+                                <div class="form-floating my-4">
+                                    <input type="subject" name="subject" id="subject"class="form-control" placeholder="Subject" required>
+
+                                    <label for="subject">Subject</label>
+                                </div>
+
+                                <div class="form-floating mb-4">
+                                    <textarea id="message" name="message" class="form-control" placeholder="Leave a comment here" required style="height: 160px"></textarea>
+
+                                    <label for="message">Pesan</label>
+                                </div>
+
+                                <div class="col-lg-5 col-6">
+                                    <button type="submit" class="form-control">Kirim</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mt-5 ms-auto">
+                            <div class="row">
+                                <div class="col-12 border-bottom contact-info mb-3">
+                                    <h6 class="mb-3">Kelompok 2 </h6>
+                        
+                                    <a href="mailto:amethyst123@gmail.com" class="custom-link">
+                                        amethystorbit24@gmail.com
+                                        <i class="bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="{{ url_for ('home') }}">Amethyst</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2024 <strong> Amethyst</strong></p>
+                        <br>
+                    </div>
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="{{ url_for ('about') }}" class="footer-menu-link">About</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('mind_body') }}" class="footer-menu-link">Mind&Body</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('recharge_explore') }}" class="footer-menu-link">Recharge&Explore</a></li>
+
+                            <li class="footer-menu-item"><a href="{{ url_for ('suggestion') }}" class="footer-menu-link">Suggestion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/Headroom.js"></script>
+        <script src="../static/js/jQuery.headroom.js"></script>
+        <script src="../static/js/slick.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+    </body>
+</html>

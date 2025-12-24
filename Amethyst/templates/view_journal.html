@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Journal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f6ff;
+            color: #333333;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+            max-width: 800px;
+        }
+        .table {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .table th, .table td {
+            border: none;
+            color: #333333;
+            font-weight: normal;
+            font-size: 16px;
+            vertical-align: middle; /* Menengahkan isi sel dalam kolom */
+        }
+        .table th {
+            background-color: #6ab7ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            padding: 12px 15px;
+            white-space: nowrap; /* Mencegah pembungkusan teks di kolom tanggal */
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #f0f6ff;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        .btn-secondary {
+            background-color: #6ab7ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #4e8fff;
+        }
+        .btn-danger, .btn-primary {
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-danger:hover, .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        .btn-back-to-mind-body {
+            background-color: #32c8cd;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .btn-back-to-mind-body:hover {
+            background-color: #2aaab0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4 text-center">Catatan Jurnal</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Catatan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in journal_entries %}
+                    <tr>
+                        <td>{{ entry['date'] }}</td>
+                        <td>{{ entry['note'] }}</td>
+                        <td>
+                            <form action="{{ url_for('delete_entry', entry_id=entry['id']) }}" method="POST">
+                                <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                            </form>
+                            <a href="{{ url_for('edit_entry', entry_id=entry['id']) }}" class="btn btn-primary btn-sm">Edit</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center mt-3">
+            <a href="{{ url_for('mind_body') }}" class="btn btn-secondary btn-back-to-mind-body">Selesai</a>
+            <a href="{{ url_for('catatan') }}" class="btn btn-secondary btn-back-to-mind-body">Kembali ke Journaling</a>
+        </div>
+    </div>
+</body>
+</html>

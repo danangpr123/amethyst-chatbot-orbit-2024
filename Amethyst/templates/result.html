@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classification Result</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+        <!-- CSS FILES -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    
+            <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" >
+            <link rel="stylesheet"type="text/css" href="../static/css/bootstrap-icons.css" >
+    
+            <link rel="stylesheet" type="text/css" href="../static/css/slick.css">
+    
+            <link rel="stylesheet"type="text/css" href="../static/css/art.css">
+        
+        <style>
+            .classification-frame {
+                margin-top: 250px; 
+                margin-bottom: 50px; 
+                text-align: center; 
+                background-color: #f9f9f9; 
+                padding: 5px;
+                border-radius: 10px; 
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            }
+
+            
+            .result-strip {
+                font-size: 24px;
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 5px;
+                color: #fff; /* Warna teks putih */
+            }
+            
+            .stress {
+                background-color: #ff6666; /* Warna latar belakang untuk hasil stres */
+            }
+            
+            .no-stress {
+                background-color: #66cc66; /* Warna latar belakang untuk hasil tanpa stres */
+            }
+            
+            .btn-back {
+                display: inline-block;
+                margin-top: 20px; /* Jarak antara teks hasil dan tombol kembali */
+                padding: 10px 20px;
+                background-color: #007bff; /* Warna tombol biru */
+                color: #fff; /* Warna teks putih */
+                text-decoration: none; /* Hilangkan dekorasi tautan */
+                border-radius: 5px;
+                transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+            }
+            
+            .btn-back:hover {
+                background-color: #0056b3; /* Warna tombol biru lebih gelap saat dihover */
+            }
+         </style>
+</head>
+<body>
+    
+    <section class="preloader">
+        <div class="spinner">
+            <span class="sk-inner-circle"></span>
+        </div>
+    </section>
+
+    <main>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a class="logo" href="{{ url_for ('home') }}" ><img src="../static/images/logo/Logo (1).png" alt="Logo"></a></li>
+                <a class="navbar-brand" href="{{ url_for ('home') }}" > <strong><span>Amethyst</span></strong>
+                </a>
+
+        
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('about') }}">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mind_body') }}">Mind & Body </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('recharge_explore') }}">Recharge & Explore</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('mood') }}">Calendar</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for ('suggestion') }}">Suggestion</a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" role="button" class="nav-link dropdown-toggle bi bi-person custom-icon me-3" id="navbarDropdown" aria-expanded="false" data-bs-toggle="dropdown"></a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for ('logout')}}">Logout</a></li>
+                        </ul>
+                    </li>
+                    
+                </div>
+            </div>
+        </nav>
+
+    <div class="container">
+        <div class="classification-frame">
+            <h1>Classification Result</h1>
+            <p>Hasil dari tes anda menunjukkan Anda: <span class="result-strip {{ 'stress' if prediction == 'Stress' else 'no-stress' }}">{{ prediction }}</span></p>
+            <a href="{{ url_for('deteksi') }}" class="btn-back">Kembali</a>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="{{ url_for ('home') }}">Amethyst</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2024 <strong> Amethyst</strong></p>
+                    <br>
+                </div>
+
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="{{ url_for ('about') }}" class="footer-menu-link">About</a></li>
+
+                        <li class="footer-menu-item"><a href="{{ url_for ('mind_body') }}" class="footer-menu-link">Mind&Body</a></li>
+
+                        <li class="footer-menu-item"><a href="{{ url_for ('recharge_explore') }}" class="footer-menu-link">Recharge&Explore</a></li>
+
+                        <li class="footer-menu-item"><a href="{{ url_for ('suggestion') }}" class="footer-menu-link">Suggestion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+            <!-- JAVASCRIPT FILES -->
+            <script src="../static/js/jquery.min.js"></script>
+            <script src="../static/js/bootstrap.bundle.min.js"></script>
+            <script src="../static/js/Headroom.js"></script>
+            <script src="../static/js/jQuery.headroom.js"></script>
+            <script src="../static/js/slick.min.js"></script>
+            <script src="../static/js/custom.js"></script>
+</body>
+</html>

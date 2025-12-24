@@ -1,0 +1,82 @@
+/* CSS untuk mempercantik tampilan mood.html */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.mood-container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.mood-container h2 {
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.emoticon-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.emoticon-option {
+    margin-right: 40px;
+    margin-bottom: 50px;
+}
+
+.emoticon-option label {
+    display: block;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button-container input[type="submit"] {
+    width: 200px; /* Sesuaikan lebar tombol dengan kebutuhan Anda */
+}
+
+footer {
+    background-color: #343a40;
+    padding: 60px 0;
+    color: #ffffff;
+}
+
+.footer-menu {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-menu-item {
+    margin-bottom: 10px;
+}
+
+.footer-menu-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-icon {
+    list-style: none;
+    padding-left: 0;
+}
+
+.social-icon-link {
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.site-footer p {
+    margin: 0;
+}
